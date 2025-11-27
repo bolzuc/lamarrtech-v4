@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios SAP - Lamarr Tech</title>
+    <link rel="icon" href="img/infinity-modern-bluedark.png" type="image/png">
+    
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- CSS Específicos -->
+    <link rel="stylesheet" href="css/service-page.css"> <!-- Estilo Híbrido + Grid 2x2 -->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home-footer.css"> <!-- Footer Oscuro -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" data-lang-key="nav_inicio">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active" data-lang-key="nav_servicios">SERVICIOS
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html" data-lang-key="nav_servicios_cloud">CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html" data-lang-key="nav_servicios_integrate">INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html" data-lang-key="nav_servicios_data_ai">DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html" data-lang-key="nav_servicios_secure">SECURE</a></li>
+                            <li><a href="services-sap.html" data-lang-key="nav_servicios_sap">SAP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="noticias.html" data-lang-key="nav_noticias">NOTICIAS</a></li>
+                    <li><a href="contact.html" data-lang-key="nav_contacto">CONTACTO</a></li>
+                </ul>
+            </nav>
+            
+            <div class="language-switcher">
+                <button class="lang-btn" aria-label="Seleccionar idioma">
+                    <span class="lang-btn-text">ES</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="#" data-lang="es">🇪🇸 ES (Español)</a>
+                    <a href="#" data-lang="pt">🇧🇷 PT (Português)</a>
+                    <a href="#" data-lang="en">🇺🇸 EN (English)</a>
+                </div>
+            </div>
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html" data-lang-key="nav_inicio">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle" data-lang-key="nav_servicios">SERVICIOS <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">SECURE</a></li>
+                        <li><a href="services-sap.html">SAP</a></li>
+                    </ul>
+                </li>
+                <li><a href="noticias.html" data-lang-key="nav_noticias">NOTICIAS</a></li>
+                <li><a href="contact.html" data-lang-key="nav_contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main>
+        <!-- HERO DARK -->
+        <section class="service-hero">
+            <canvas id="service-canvas"></canvas>
+            
+            <div class="service-hero-content reveal active">
+                <span class="service-badge">Ecosistema SAP</span>
+                <h1 data-lang-key="sap_h1">LAMARR | SAP</h1>
+                <p><strong data-lang-key="sap_s1">El poder de SAP, llevado a su máximo desempeño.</strong><br>
+                <span data-lang-key="sap_p1">Acompañamos a empresas en su evolución hacia un sistema más eficiente, integrado y preparado para crecer.</span></p>
+            </div>
+        </section>
+
+        <!-- CONTENIDO CLARO -->
+        <section class="page-section">
+            <div class="container">
+                
+                <!-- Estrategia -->
+                <div class="strategy-block reveal"> 
+                    <p data-lang-key="sap_p2">Combinamos experiencia operativa en SAP con dominio de las nuevas soluciones SAP BTP para integrar, automatizar y escalar tu negocio. Diseñamos entornos SAP que se adaptan a tu estrategia y no al revés.</p>
+                </div>
+
+                <h2 class="section-subtitle reveal" data-lang-key="sap_s2_h2">Nuestros Servicios SAP</h2>
+
+                <!-- GRID 2x2 (Ajustado para 4 items principales, o flow fluido) -->
+                <!-- Nota: Había 5 items, para mantener el grid 2x2 perfecto, la 5ta tarjeta quedará centrada abajo, lo cual se ve bien gracias a Flexbox en el CSS -->
+                <div class="service-feature-list">
+                    
+                    <div class="service-feature-item reveal">
+                        <div class="service-feature-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                        </div>
+                        <div class="service-feature-content">
+                            <h3 data-lang-key="sap_s2_c1_h3">Consultoría Funcional</h3>
+                            <p data-lang-key="sap_s2_c1_p">Optimizamos tu operación financiera, logística, contable y de abastecimiento para simplificar, controlar y acelerar tareas clave.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-feature-item reveal">
+                        <div class="service-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                        </div>
+                        <div class="service-feature-content">
+                            <h3 data-lang-key="sap_s2_c2_h3">Implementación y Actualización</h3>
+                            <!-- Usamos <p> en lugar de <ul> para mantener consistencia visual con las tarjetas -->
+                            <p>Implementación SAP Business One, migración a versión 10.0 (HANA) y evolución de SAP ECC hacia S/4 HANA.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-feature-item reveal">
+                        <div class="service-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                        </div>
+                        <div class="service-feature-content">
+                            <h3 data-lang-key="sap_s2_c3_h3">Soporte & Performance</h3>
+                            <p data-lang-key="sap_s2_c3_p">Administración de bases de datos, tuning, resolución de incidencias y continuidad operativa. Estabilidad y rendimiento 24/7.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-feature-item reveal">
+                        <div class="service-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+                        </div>
+                        <div class="service-feature-content">
+                            <h3 data-lang-key="sap_s2_c4_h3">SAP BTP & Conectividad</h3>
+                            <p data-lang-key="sap_s2_c4_p">Integramos SAP con CRM, e-commerce y nube. Automatización, APIs, workflows y datos centralizados.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta 5 (Centrada automáticamente por Flexbox) -->
+                    <div class="service-feature-item reveal">
+                        <div class="service-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+                        </div>
+                        <div class="service-feature-content">
+                            <h3 data-lang-key="sap_s2_c5_h3">SAP en la Nube</h3>
+                            <p data-lang-key="sap_s2_c5_p">Arquitecturas seguras y escalables en AWS, GCP o Huawei, con optimización FinOps para reducir costos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strategy-block reveal" style="margin-top: 30px; text-align: left;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--text-main);" data-lang-key="sap_s3_h2">Casos Reales</h2>
+                    <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-muted);">
+                        <li data-lang-key="sap_s3_l1" style="margin-bottom: 10px;">Migramos SAP Business One a AWS, reduciendo un 35% los costos y habilitando acceso remoto seguro.</li>
+                        <li data-lang-key="sap_s3_l2" style="margin-bottom: 10px;">Integración SAP + e-commerce, logrando actualización automática de inventarios en tiempo real.</li>
+                        <li data-lang-key="sap_s3_l3">Optimización financiera en SAP ECC, reduciendo tiempos de cierre contable en un 60%.</li>
+                    </ul>
+                </div>
+
+                <div class="contact-button-container reveal" style="text-align: center; margin-top: 50px;">
+                    <a href="contact.html" class="btn-primary btn-glow" data-lang-key="sap_s3_btn">Tu evolución SAP comienza aquí</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="home-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_contact_h4">Contacto</h4>
+                    <ul>
+                        <li><strong data-lang-key="footer_address_label">Dirección:</strong> Av nueva providencia 1881, of 1912.</li>
+                        <li><strong data-lang-key="footer_email_label">Email:</strong> contacto@lamarrtech.cl</li>
+                        <li><strong data-lang-key="footer_phone_label">Teléfono:</strong> +56 9 3199 3952</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang-key="nav_servicios">Servicios</h4>
+                    <ul>
+                        <li><a href="lamarr-cloud.html">Cloud Solutions</a></li>
+                        <li><a href="lamarr-integrate.html">Integration Services</a></li>
+                        <li><a href="lamarr-data-ai.html">Data & AI</a></li>
+                        <li><a href="lamarr-secure.html">Cybersecurity</a></li>
+                        <li><a href="services-sap.html">SAP Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_links_h4">Empresa</h4>
+                    <ul>
+                        <li><a href="index.html" data-lang-key="footer_link_home">Inicio</a></li>
+                        <li><a href="noticias.html" data-lang-key="footer_link_news">Noticias</a></li>
+                        <li><a href="contact.html" data-lang-key="footer_link_contact">Contacto</a></li>
+                        <li><a href="https://www.linkedin.com/company/lamarr-tech" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer_copyright">&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+    <script src="js/idiomas.js"></script>
+    
+    <script>
+        (function() {
+            // Animación Partículas
+            function initParticleAnimation(canvasId, particleCount = 40) {
+                const canvas = document.getElementById(canvasId);
+                if(!canvas) return;
+                const ctx = canvas.getContext('2d');
+                let width, height;
+                let particles = [];
+
+                function resize() {
+                    width = canvas.width = canvas.parentElement.offsetWidth;
+                    height = canvas.height = canvas.parentElement.offsetHeight;
+                }
+                
+                class Particle {
+                    constructor() {
+                        this.x = Math.random() * width;
+                        this.y = Math.random() * height;
+                        this.vx = (Math.random() - 0.5) * 0.5;
+                        this.vy = (Math.random() - 0.5) * 0.5;
+                        this.size = Math.random() * 3 + 1.5;
+                    }
+                    update() {
+                        this.x += this.vx;
+                        this.y += this.vy;
+                        if(this.x < 0 || this.x > width) this.vx *= -1;
+                        if(this.y < 0 || this.y > height) this.vy *= -1;
+                    }
+                    draw() {
+                        ctx.fillStyle = 'rgba(255,255,255,0.7)'; 
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+
+                function init() {
+                    resize();
+                    for(let i=0; i<particleCount; i++) particles.push(new Particle());
+                    animate();
+                }
+
+                function animate() {
+                    ctx.clearRect(0, 0, width, height);
+                    particles.forEach(p => { p.update(); p.draw(); });
+                    for(let i=0; i<particles.length; i++) {
+                        for(let j=i; j<particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const dist = Math.sqrt(dx*dx + dy*dy);
+                            if(dist < 150) {
+                                ctx.strokeStyle = `rgba(255,255,255,${0.3 - dist/600})`;
+                                ctx.beginPath();
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                    requestAnimationFrame(animate);
+                }
+
+                window.addEventListener('resize', resize);
+                init();
+            }
+
+            function revealOnScroll() {
+                const reveals = document.querySelectorAll('.reveal');
+                const windowHeight = window.innerHeight;
+                const elementVisible = 150;
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                initParticleAnimation('service-canvas', 40);
+                window.addEventListener('scroll', revealOnScroll);
+                revealOnScroll();
+            });
+        })();
+    </script>
+</body>
+</html>

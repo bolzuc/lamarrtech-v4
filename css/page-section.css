@@ -1,0 +1,216 @@
+/* service-page.css - DISEÑO HÍBRIDO: HERO DARK + CONTENIDO CLEAN */
+
+:root {
+    /* Paleta Híbrida */
+    --bg-dark-hero: #020617;  
+    --bg-light: #ffffff;      
+    --bg-light-alt: #f8fafc;  
+    --text-main: #1e293b;     
+    --text-muted: #64748b;    
+    --accent-glow: #00d4ff;   
+    --color-primary: #0056b3; 
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+}
+
+/* --- HERO DARK TECH --- */
+.service-hero {
+    position: relative;
+    height: 55vh; 
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+    overflow: hidden;
+    margin-bottom: 0;
+    color: white; 
+}
+
+#service-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.service-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.service-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    color: var(--accent-glow);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.service-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: white;
+}
+
+.service-hero p {
+    font-size: 1.25rem;
+    color: #cbd5e1; 
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* --- SECCIÓN PRINCIPAL CLARA --- */
+.page-section {
+    padding: 80px 0;
+    background-color: var(--bg-light); 
+    position: relative;
+}
+
+/* --- BLOQUE DE ESTRATEGIA (Simple) --- */
+.strategy-block {
+    background: #f8fafc; 
+    border-left: 4px solid var(--color-primary); 
+    padding: 40px 50px;
+    border-radius: 12px; 
+    margin-bottom: 80px;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    text-align: center; 
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.strategy-block p {
+    font-size: 1.25rem; 
+    color: var(--text-main); 
+    font-weight: 500; 
+    line-height: 1.7;
+}
+
+/* --- NUEVO ESTILO: LISTA DE PROCESO LIMPIA (Referencia imagen) --- */
+.clean-process-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 100px;
+}
+
+.clean-process-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    /* Línea vertical azul continua a la izquierda */
+    border-left: 3px solid var(--color-primary);
+    margin-left: 15px; /* Espacio para el punto */
+}
+
+.clean-process-item {
+    position: relative;
+    padding-left: 35px; /* Espacio entre línea y texto */
+    margin-bottom: 50px;
+}
+
+.clean-process-item:last-child {
+    margin-bottom: 0;
+}
+
+/* El círculo (nodo) */
+.clean-process-item::before {
+    content: '';
+    position: absolute;
+    left: -11px; /* Centrado sobre la línea de 3px */
+    top: 5px; /* Alineado con la primera línea de texto */
+    width: 16px;
+    height: 16px;
+    background-color: #fff; /* Centro blanco */
+    border: 3px solid var(--color-primary); /* Borde azul */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Título del ítem */
+.clean-process-item h3 {
+    font-size: 1.35rem;
+    font-weight: 800; /* Extra bold como en la imagen */
+    color: #0f172a;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+/* Texto del ítem */
+.clean-process-item p {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Título de Sección estilo Code */
+.code-style-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.code-style-title span {
+    color: var(--color-primary); /* Las barras // en azul */
+    margin-right: 10px;
+}
+
+/* Imagen derecha simple */
+.visual-side img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* --- ANIMACIONES --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .clean-process-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .visual-side {
+        order: -1; /* Imagen arriba en móvil */
+    }
+    .service-hero h1 { font-size: 2.5rem; }
+    .strategy-block { padding: 30px; }
+}
