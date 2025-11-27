@@ -1,137 +1,23 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias - Lamarr Tech</title>
-    <!-- Favicon - NUEVO -->
     <link rel="icon" href="img/infinity-modern-bluedark.png" type="image/png">
-    <link rel="shortcut icon" href="img/infinity-modern-bluedark.png" type="image/png">
-    <link rel="apple-touch-icon" href="img/infinity-modern-bluedark.png">
+    
+    <!-- CSS Base -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/page-section.css">
     <link rel="stylesheet" href="css/footer.css">
-    <!-- CSS de noticias actualizado -->
-    <link rel="stylesheet" href="css/noticias.css">
-    
-    <!-- INICIO: Estilos para el Carrusel del Webinar -->
-    <style>
-        .webinar-carousel-container {
-            position: relative;
-            width: 100%;
-            max-width: 100%; /* El contenedor del grid ya lo limita */
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 8px;
-            background-color: #f8f9fa;
-            border: 1px solid var(--color-border);
-        }
-
-        .webinar-carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .webinar-carousel-slide {
-            flex-shrink: 0;
-            width: 100%;
-            padding: 20px; /* Espacio interno para que la imagen "respire" */
-            box-sizing: border-box; /* Incluir padding en el ancho */
-            
-            /* --- CAMBIO 1: Altura fija y centrado --- */
-            height: 450px; /* Altura fija para el slide en escritorio */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .webinar-carousel-slide img {
-            width: 100%;
-            /* --- CAMBIO 1: Altura y max-height actualizados --- */
-            height: 100%; /* La imagen ocupa el alto del contenedor */
-            max-height: 100%; /* Se ajusta al padding del contenedor */
-            object-fit: contain; /* Mostrar la imagen completa */
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .webinar-carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            border: 1px solid var(--color-border);
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
-            color: var(--color-text);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            transition: all 0.2s ease;
-        }
-
-        .webinar-carousel-btn:hover {
-            background-color: #fff;
-            color: var(--color-primary);
-            border-color: var(--color-primary);
-        }
-
-        .webinar-carousel-btn.prev { left: 15px; }
-        .webinar-carousel-btn.next { right: 15px; }
-
-        .webinar-carousel-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
-
-        .webinar-carousel-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #ccc;
-            border: 1px solid rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .webinar-carousel-dot.active {
-            background-color: var(--color-primary);
-            transform: scale(1.2);
-        }
-
-        @media (max-width: 768px) {
-            .webinar-carousel-slide {
-                padding: 10px; /* Menos padding en móvil */
-                /* --- CAMBIO 1: Altura fija en móvil --- */
-                height: 300px; /* Altura fija para el slide en móvil */
-            }
-            .webinar-carousel-slide img {
-                /* --- CAMBIO 1: Quitado max-height, ya controlado por el padre --- */
-                max-height: 100%; /* Se ajusta al padding del contenedor */
-            }
-            .webinar-carousel-btn {
-                width: 36px;
-                height: 36px;
-            }
-            .webinar-carousel-dots {
-                bottom: 15px;
-            }
-        }
-    </style>
-    <!-- FIN: Estilos para el Carrusel del Webinar -->
+    <link rel="stylesheet" href="css/home-footer.css"> 
+    <link rel="stylesheet" href="css/noticias.css"> <!-- CSS Actualizado -->
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
+
     <header>
         <div class="container">
             <div class="logo">
@@ -152,13 +38,11 @@
                             <li><a href="services-sap.html" data-lang-key="nav_servicios_sap">SAP</a></li>
                         </ul>
                     </li>
-                    <!-- <li><a href="nuestro-equipo.html" data-lang-key="nav_equipo">EQUIPO</a></li> -->
                     <li><a href="noticias.html" class="active" data-lang-key="nav_noticias">NOTICIAS</a></li>
                     <li><a href="contact.html" data-lang-key="nav_contacto">CONTACTO</a></li>
                 </ul>
             </nav>
             
-            <!-- Botón de Idioma MODIFICADO -->
             <div class="language-switcher">
                 <button class="lang-btn" aria-label="Seleccionar idioma">
                     <span class="lang-btn-text">ES</span>
@@ -183,18 +67,15 @@
             <ul>
                 <li><a href="index.html" data-lang-key="nav_inicio">INICIO</a></li>
                 <li class="mobile-submenu">
-                    <a href="#" class="mobile-submenu-toggle" data-lang-key="nav_servicios">SERVICIOS
-                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                    </a>
+                    <a href="#" class="mobile-submenu-toggle" data-lang-key="nav_servicios">SERVICIOS <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
                     <ul class="mobile-submenu-content">
-                        <li><a href="lamarr-cloud.html" data-lang-key="nav_servicios_cloud">CLOUD</a></li>
-                        <li><a href="lamarr-integrate.html" data-lang-key="nav_servicios_integrate">INTEGRATE</a></li>
-                        <li><a href="lamarr-data-ai.html" data-lang-key="nav_servicios_data_ai">DATA+AI</a></li>
-                        <li><a href="lamarr-secure.html" data-lang-key="nav_servicios_secure">SECURE</a></li>
-                        <li><a href="services-sap.html" data-lang-key="nav_servicios_sap">SAP</a></li>
+                        <li><a href="lamarr-cloud.html">CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">SECURE</a></li>
+                        <li><a href="services-sap.html">SAP</a></li>
                     </ul>
                 </li>
-                <!-- <li><a href="nuestro-equipo.html" data-lang-key="nav_equipo">EQUIPO</a></li> -->
                 <li><a href="noticias.html" data-lang-key="nav_noticias">NOTICIAS</a></li>
                 <li><a href="contact.html" data-lang-key="nav_contacto">CONTACTO</a></li>
             </ul>
@@ -202,264 +83,262 @@
     </div>
 
     <main>
-        <section class="page-section">
-            <div class="container">
-                <h1 data-lang-key="news_h1">Noticias: Lo que estamos construyendo</h1>
-                <p data-lang-key="news_p1">Crecemos junto a nuestros partners, nuestros clientes y nuestra comunidad. Cada paso fortalece nuestra capacidad de entregar soluciones integradas, seguras y escalables en SAP, Cloud e IA.</p>
-                
-                <!-- ========================================================================== -->
-                <!-- SECCIÓN MOVIDA AL PRINCIPIO: Próximos Eventos (Webinar SAP B1) -->
-                <!-- ========================================================================== -->
-                <h2 class="section-title-h2" data-lang-key="news_s3_h2">Próximos Eventos</h2>
-                <div class="proximos-eventos-container" style="margin-top: 30px;">
-                    <!-- Tarjeta del evento actualizado -->
-                    <div class="page-detail-card">
-                        <h3 data-lang-key="news_s3_c1_h3">Webinar Exclusivo: Potencia tu SAP Business One</h3>
-                        <p><strong data-lang-key="news_s3_c1_s">Estrategias de Migración, Optimización y Ahorro en la Nube</strong><br>
-                           <span data-lang-key="news_s3_c1_p">¿Tu infraestructura actual limita el crecimiento de tu negocio? Descubre cómo migrar SAP Business One a la nube puede reducir costos operativos, mejorar la seguridad y garantizar la continuidad de tu operación. Únete a nuestros expertos en una sesión práctica.</span></p>
-                        <ul>
-                            <li data-lang-key="news_s3_c1_l1">Descubre cómo lograr una migración sin fricción.</li>
-                            <li data-lang-key="news_s3_c1_l2">Estrategias reales para optimizar costos y rendimiento.</li>
-                            <li data-lang-key="news_s3_c1_l3">Conoce casos de éxito que ya dieron el salto.</li>
-                        </ul>
-                        <a href="https://www.lamarrtech.cl/Landing%20Page%20Webinar%20SAP%20B1/landing.html" class="btn-primary" style="margin-top: 15px;" data-lang-key="news_s3_c1_btn" target="_blank">→ Reserva tu cupo ahora</a>
-                    </div>
-                </div>
-                <!-- ========================================================================== -->
-
-
-                <!-- Sección: Nuevas Alianzas -->
-                <h2 class="section-title-h2" data-lang-key="news_s1_h2">Nuevas Alianzas Estratégicas</h2>
-                <div class="noticia-list-container">
-                    
-                    <article class="noticia-item item-image-left">
-                        <div class="noticia-item-content">
-                            <h3 data-lang-key="news_s1_c1_h3">Lamarr + WIT: Alianza para Desarrollo de Nuevos Negocios</h3>
-                            <p data-lang-key="news_s1_c1_p">Hemos formalizado una alianza con WIT para fortalecer la apertura y calificación de oportunidades comerciales en Chile y LATAM. Este trabajo conjunto nos permite llegar a empresas que buscan modernizar SAP y escalar hacia arquitecturas multicloud, con acompañamiento consultivo y visión estratégica.</p>
-                        </div>
-                    </article>
-
-                    <article class="noticia-item item-image-left">
-                        <div class="noticia-item-content">
-                            <h3 data-lang-key="news_s1_c2_h3">Lamarr + La Araucaria Software: Soluciones Conjuntas en Ciberseguridad</h3>
-                            <p data-lang-key="news_s1_c2_p">Junto a La Araucaria Software, estamos desarrollando soluciones orientadas a ciberseguridad aplicada, protección de datos críticos y monitoreo inteligente de riesgos. La combinación de ingeniería segura + integración SAP + arquitectura cloud nos permite entregar soluciones escalables, eficientes y alineadas a los desafíos actuales.</p>
-                        </div>
-                    </article>
-
-                    <article class="noticia-item item-image-left">
-                        <div class="noticia-item-content">
-                            <h3 data-lang-key="news_s1_c3_h3">Convenio Marco con Noventiq</h3>
-                            <p data-lang-key="news_s1_c3_p">Este convenio formaliza nuestra capacidad de ejecutar proyectos SAP + Cloud de manera conjunta, asegurando continuidad, trazabilidad y escalabilidad en la entrega de servicios.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Sección: Eventos y Noticias Pasadas -->
-                <h2 class="section-title-h2" data-lang-key="news_s2_h2">Eventos y Noticias Pasadas</h2>
-                <div class="noticia-list-container">
-                    
-                    <article class="noticia-item item-image-right noticia-item-certificado">
-                        
-                        <!-- INICIO: Carrusel del Webinar -->
-                        <div class="webinar-carousel-container" id="webinar-carousel">
-                            <div class="webinar-carousel-track">
-                                <div class="webinar-carousel-slide">
-                                    <img src="img/certificado-huawei.jpg" alt="Certificado Huawei Cloud Partner Lamarr Tech" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/212529?text=Certificado+Huawei';">
-                                </div>
-                                <div class="webinar-carousel-slide">
-                                    <img src="img/webinar-1.jpg" alt="Foto del webinar 1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/212529?text=Foto+Webinar+1';">
-                                </div>
-                                <div class="webinar-carousel-slide">
-                                    <img src="img/webinar-2.jpg" alt="Foto del webinar 2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/212529?text=Foto+Webinar+2';">
-                                </div>
-                            </div>
-                            
-                            <!-- Botones de Navegación -->
-                            <button class="webinar-carousel-btn prev" aria-label="Slide anterior">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                            </button>
-                            <button class="webinar-carousel-btn next" aria-label="Siguiente slide">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </button>
-
-                            <!-- Puntos de Paginación -->
-                            <div class="webinar-carousel-dots">
-                                <!-- Los puntos se generarán con JS -->
-                            </div>
-                        </div>
-                        <!-- FIN: Carrusel del Webinar -->
-
-                        <div class="noticia-item-content">
-                            <h3 data-lang-key="news_s2_c1_h3">Huawei Cloud reconoce a Lamarr como Partner con Potencial</h3>
-                            <p data-lang-key="news_s2_c1_p">Lamarr participó en el Huawei Cloud Summit, donde fuimos reconocidos como Partner con Potencial en la región por nuestra experiencia en modernización SAP, estrategias multicloud y arquitecturas híbridas. Este hito refleja nuestro compromiso con soluciones de alto impacto, con ejecución técnica propia y acompañamiento continuo.</p>
-                        </div>
-                    </article>
-
-                    <article class="noticia-item noticia-item-huawei item-image-right">
-                        <div class="noticia-item-image">
-                            <img src="img/reunion-huawei-one.jpg" alt="Reunión Huawei One">
-                        </div>
-                        <div class="noticia-item-content">
-                            <h3 data-lang-key="news_s2_c2_h3">Evento Presencial: SAP Business One en Huawei Cloud</h3>
-                            <p data-lang-key="news_s2_c2_p">Realizamos un encuentro ejecutivo orientado a organizaciones que operan SAP Business One y desean migrar u optimizar su infraestructura en la nube, manteniendo continuidad operativa y control de costos. Presentamos rutas de transición, casos reales y modelos de arquitectura.</p>
-                            <a href="noticia-sap-huawei.html" class="btn-primary" style="margin-top: 10px;" data-lang-key="news_s2_c2_btn">Leer más y ver video</a>
-                        </div>
-                    </article>
-
-                    <article class="noticia-item item-image-left">
-                        <div class="noticia-item-content">
-                            <h3 data-lang-key="news_s2_c3_h3">Webinar Ejecutivo junto a Noventiq: El Fin de Soporte de SAP ECC</h3>
-                            <p data-lang-key="news_s2_c3_p">En un encuentro ejecutivo reciente, conversamos junto a Noventiq sobre el fin de soporte de SAP ECC, sus implicancias y las opciones de transición hacia SAP en la nube. El enfoque fue claro: tomar decisiones informadas, no apresuradas.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Lema Institucional -->
-                <div class="cierre-institucional">
-                    <p data-lang-key="news_cierre"></p>
-                </div>
-
-                <!-- Nueva Sección CTA -->
-                <div class="cta-section">
-                    <h3 data-lang-key="news_cta_h3">No te pierdas nuestras futuras invitaciones</h3>
-                    <p data-lang-key="news_cta_p">Si no quieres perderte nuestros próximos eventos y quieres que te invitemos directamente a tu correo, regístrate en nuestra página de contacto.</p>
-                    <a href="contact.html" class="btn-primary" data-lang-key="news_cta_btn">Inscríbete aquí</a>
-                </div>
-
+        <!-- HERO -->
+        <section class="news-hero">
+            <canvas id="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.8;"></canvas>
+            <div class="container" style="position: relative; z-index: 2;">
+                <h1 class="slide-in-header show" data-lang-key="news_h1">Noticias: Lo que estamos construyendo</h1>
+                <p class="slide-in show" data-lang-key="news_p1">Innovación, alianzas estratégicas y eventos que transforman la industria.</p>
             </div>
         </section>
+
+        <!-- 1. PRÓXIMO EVENTO (WEBINAR) -->
+        <section class="highlight-section reveal">
+            <div class="highlight-container">
+                <div class="highlight-content">
+                    <span class="highlight-badge">WEBINAR EXCLUSIVO</span>
+                    <h2 data-lang-key="news_s3_c1_h3">Potencia tu SAP Business One en la Nube</h2>
+                    <p data-lang-key="news_s3_c1_p">¿Tu infraestructura limita tu crecimiento? Descubre cómo migrar SAP Business One a la nube puede reducir costos operativos, mejorar la seguridad y garantizar la continuidad de tu operación.</p>
+                    
+                    <a href="https://www.lamarrtech.cl/Landing%20Page%20Webinar%20SAP%20B1/landing.html" target="_blank" class="btn-primary" data-lang-key="news_s3_c1_btn">Reserva tu cupo ahora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. EVENTOS PASADOS (TECH STREAM) -->
+        <section class="tech-stream-section">
+            <div class="container">
+                
+                <div class="stream-header reveal">
+                    <h2 data-lang-key="news_s2_h2">Eventos y Noticias Pasadas</h2>
+                </div>
+
+                <div class="tech-stream-container reveal">
+                    
+                    <!-- Item 1 -->
+                    <div class="stream-item">
+                        <div class="stream-node"></div>
+                        <div class="stream-content">
+                            <span class="stream-meta">RECONOCIMIENTO</span>
+                            <h3 class="stream-title" data-lang-key="news_s2_c1_h3">Huawei Cloud reconoce a Lamarr como Partner con Potencial</h3>
+                            <p class="stream-description" data-lang-key="news_s2_c1_p">Fuimos reconocidos en el Huawei Cloud Summit por nuestra experiencia en modernización SAP y estrategias multicloud. Este hito valida nuestra capacidad técnica y visión regional.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="stream-item">
+                        <div class="stream-node"></div>
+                        <div class="stream-content">
+                            <span class="stream-meta">EVENTO PRESENCIAL</span>
+                            <h3 class="stream-title" data-lang-key="news_s2_c2_h3">Encuentro Ejecutivo: SAP Business One en Huawei Cloud</h3>
+                            <p class="stream-description" data-lang-key="news_s2_c2_p">Realizamos un encuentro ejecutivo orientado a organizaciones que operan SAP Business One. Presentamos rutas de transición, casos reales y modelos de arquitectura eficientes.</p>
+                            <a href="noticia-sap-huawei.html" class="stream-link" style="color: var(--color-primary);" data-lang-key="news_s2_c2_btn">Leer resumen del evento →</a>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="stream-item">
+                        <div class="stream-node"></div>
+                        <div class="stream-content">
+                            <span class="stream-meta">WEBINAR EJECUTIVO</span>
+                            <h3 class="stream-title" data-lang-key="news_s2_c3_h3">El Fin de Soporte de SAP ECC: Estrategia y Acción</h3>
+                            <p class="stream-description" data-lang-key="news_s2_c3_p">Conversatorio técnico junto a Noventiq sobre las implicancias del fin de soporte y las opciones reales de transición hacia la nube. Claridad para la toma de decisiones críticas.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ALIANZAS ESTRATÉGICAS (SMART LIST / SIN TARJETAS) -->
+        <section class="alliance-section">
+            <div class="container">
+                <h2 class="section-title-center" data-lang-key="news_s1_h2">Nuevas Alianzas Estratégicas</h2>
+
+                <div class="alliance-list reveal">
+                    
+                    <!-- Fila 1 -->
+                    <div class="alliance-item">
+                        <div class="alliance-header">
+                            <span class="alliance-category">DESARROLLO COMERCIAL</span>
+                            <h3 data-lang-key="news_s1_c1_h3">Lamarr + WIT</h3>
+                        </div>
+                        <div class="alliance-body">
+                            <p data-lang-key="news_s1_c1_p">Alianza estratégica para fortalecer la apertura comercial en Chile y LATAM. Foco en expansión de mercado y modernización de plataformas SAP.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 -->
+                    <div class="alliance-item">
+                        <div class="alliance-header">
+                            <span class="alliance-category">CIBERSEGURIDAD</span>
+                            <h3 data-lang-key="news_s1_c2_h3">Lamarr + Araucaria Software</h3>
+                        </div>
+                        <div class="alliance-body">
+                            <p data-lang-key="news_s1_c2_p">Desarrollo conjunto de soluciones de ciberseguridad aplicada. Protección de datos críticos y monitoreo inteligente de riesgos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 -->
+                    <div class="alliance-item">
+                        <div class="alliance-header">
+                            <span class="alliance-category">CONVENIO MARCO</span>
+                            <h3 data-lang-key="news_s1_c3_h3">Alianza con Noventiq</h3>
+                        </div>
+                        <div class="alliance-body">
+                            <p data-lang-key="news_s1_c3_p">Formalización de capacidad operativa para ejecutar proyectos SAP + Cloud de gran escala, asegurando continuidad y estándares globales.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FOOTER -->
+        <section class="news-cta-section">
+            <canvas id="cta-canvas"></canvas>
+            
+            <div class="news-cta-container reveal">
+                <h3 data-lang-key="news_cta_h3">No te pierdas nuestras futuras invitaciones</h3>
+                <p data-lang-key="news_cta_p">Si no quieres perderte nuestros próximos eventos y quieres que te invitemos directamente a tu correo, regístrate en nuestra página de contacto.</p>
+                <a href="contact.html" class="btn-white-pill" data-lang-key="news_cta_btn">Inscríbete aquí</a>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer class="home-footer">
         <div class="container">
-            <p data-lang-key="footer_copyright">&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_contact_h4">Contacto</h4>
+                    <ul>
+                        <li><strong data-lang-key="footer_address_label">Dirección:</strong> Av nueva providencia 1881, of 1912.</li>
+                        <li><strong data-lang-key="footer_email_label">Email:</strong> contacto@lamarrtech.cl</li>
+                        <li><strong data-lang-key="footer_phone_label">Teléfono:</strong> +56 9 3199 3952</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang-key="nav_servicios">Servicios</h4>
+                    <ul>
+                        <li><a href="lamarr-cloud.html">Cloud Solutions</a></li>
+                        <li><a href="lamarr-integrate.html">Integration Services</a></li>
+                        <li><a href="lamarr-data-ai.html">Data & AI</a></li>
+                        <li><a href="lamarr-secure.html">Cybersecurity</a></li>
+                        <li><a href="services-sap.html">SAP Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_links_h4">Empresa</h4>
+                    <ul>
+                        <li><a href="index.html" data-lang-key="footer_link_home">Inicio</a></li>
+                        <li><a href="noticias.html" data-lang-key="footer_link_news">Noticias</a></li>
+                        <li><a href="contact.html" data-lang-key="footer_link_contact">Contacto</a></li>
+                        <li><a href="https://www.linkedin.com/company/lamarr-tech" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang-key="footer_copyright">&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
-    <script src="js/idiomas.js"></script>
+    
     <script src="js/script.js"></script>
+    <script src="js/idiomas.js"></script>
 
-    <!-- INICIO: Script para el Carrusel del Webinar -->
+    <!-- Script Partículas -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('webinar-carousel');
-            if (carousel) {
-                const track = carousel.querySelector('.webinar-carousel-track');
-                const slides = Array.from(track.children);
-                const nextButton = carousel.querySelector('.webinar-carousel-btn.next');
-                const prevButton = carousel.querySelector('.webinar-carousel-btn.prev');
-                const dotsContainer = carousel.querySelector('.webinar-carousel-dots');
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            
+            const checkScroll = () => {
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - 100) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); 
+
+            // Partículas
+            function initParticleAnimation(canvasId, particleCount = 60, color = 'rgba(0, 212, 255, 0.9)', strokeColor = 'rgba(0, 212, 255, 0.5)') {
+                const canvas = document.getElementById(canvasId);
+                if(!canvas) return;
+                const ctx = canvas.getContext('2d');
+                let width, height, particles = [];
+
+                function resize() {
+                    width = canvas.width = canvas.parentElement.offsetWidth;
+                    height = canvas.height = canvas.parentElement.offsetHeight;
+                }
                 
-                let currentIndex = 0;
-                let slideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
-                let autoplayInterval; 
-
-                // Crear puntos de navegación
-                slides.forEach((slide, index) => {
-                    const dot = document.createElement('button');
-                    dot.classList.add('webinar-carousel-dot');
-                    if (index === 0) dot.classList.add('active');
-                    dot.setAttribute('aria-label', `Ir a slide ${index + 1}`);
-                    dot.addEventListener('click', () => {
-                        goToSlide(index);
-                        resetAutoplay(); 
-                    });
-                    dotsContainer.appendChild(dot);
-                });
-
-                const dots = Array.from(dotsContainer.children);
-
-                // Función para ir a un slide
-                const goToSlide = (index) => {
-                    if (slides.length === 0) return; 
-                    
-                    if (index < 0) {
-                        index = slides.length - 1;
-                    } else if (index >= slides.length) {
-                        index = 0;
+                class Particle {
+                    constructor() {
+                        this.x = Math.random() * width;
+                        this.y = Math.random() * height;
+                        this.vx = (Math.random() - 0.5) * 0.3;
+                        this.vy = (Math.random() - 0.5) * 0.3;
+                        this.size = Math.random() * 2 + 1;
                     }
-                    
-                    // Recalcular ancho por si acaso
-                    const currentSlideWidth = slides[0].getBoundingClientRect().width;
-                    if (currentSlideWidth !== 0) {
-                        slideWidth = currentSlideWidth;
+                    update() {
+                        this.x += this.vx;
+                        this.y += this.vy;
+                        if(this.x < 0 || this.x > width) this.vx *= -1;
+                        if(this.y < 0 || this.y > height) this.vy *= -1;
                     }
-
-                    if (slideWidth !== 0) {
-                        track.style.transform = `translateX(-${slideWidth * index}px)`;
-                        currentIndex = index;
-                        updateDots();
+                    draw() {
+                        ctx.fillStyle = color;
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                        ctx.fill();
                     }
-                };
+                }
 
-                // Función para actualizar los puntos
-                const updateDots = () => {
-                    dots.forEach((dot, index) => {
-                        dot.classList.toggle('active', index === currentIndex);
-                    });
-                };
-                
-                // --- Funciones de Autoplay ---
-                const startAutoplay = () => {
-                    clearInterval(autoplayInterval); 
-                    autoplayInterval = setInterval(() => {
-                        goToSlide(currentIndex + 1);
-                    }, 8000); // 8000ms = 8 segundos
-                };
+                function init() {
+                    resize();
+                    for(let i=0; i<particleCount; i++) particles.push(new Particle());
+                    animate();
+                }
 
-                const resetAutoplay = () => {
-                    clearInterval(autoplayInterval);
-                    startAutoplay();
-                };
-
-                // Eventos de botones
-                nextButton.addEventListener('click', () => {
-                    goToSlide(currentIndex + 1);
-                    resetAutoplay(); 
-                });
-
-                prevButton.addEventListener('click', () => {
-                    goToSlide(currentIndex - 1);
-                    resetAutoplay(); 
-                });
-
-                // Recalcular ancho en re-dimensionamiento (para responsividad)
-                let resizeTimer;
-                window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(() => {
-                        const newSlideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
-                        if (newSlideWidth !== 0) { 
-                            slideWidth = newSlideWidth; 
-                            track.style.transition = 'none'; 
-                            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-                            // Forzar reflow
-                            track.offsetHeight; 
-                            track.style.transition = 'transform 0.5s ease-in-out'; 
+                function animate() {
+                    ctx.clearRect(0, 0, width, height);
+                    particles.forEach(p => { p.update(); p.draw(); });
+                    for(let i=0; i<particles.length; i++) {
+                        for(let j=i; j<particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const dist = Math.sqrt(dx*dx + dy*dy);
+                            if(dist < 150) {
+                                let opacity = 0.5 - dist/300; 
+                                if(strokeColor.includes('rgba')) {
+                                    ctx.strokeStyle = strokeColor.replace(/[\d\.]+\)$/g, opacity + ')');
+                                } else {
+                                    ctx.strokeStyle = strokeColor;
+                                }
+                                ctx.lineWidth = 0.5;
+                                ctx.beginPath();
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.stroke();
+                            }
                         }
-                        resetAutoplay(); 
-                    }, 250);
-                });
-                
-                 // Ajuste inicial por si las imágenes cargan lento
-                window.addEventListener('load', () => {
-                     const initialSlideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
-                     if (initialSlideWidth !== 0) {
-                        slideWidth = initialSlideWidth;
-                        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-                     }
-                     startAutoplay(); 
-                });
+                    }
+                    requestAnimationFrame(animate);
+                }
 
-                // --- Pausar en hover ---
-                carousel.addEventListener('mouseenter', () => {
-                    clearInterval(autoplayInterval);
-                });
-                carousel.addEventListener('mouseleave', () => {
-                    startAutoplay();
-                });
+                init();
+                window.addEventListener('resize', resize);
             }
+
+            initParticleAnimation('hero-canvas', 60);
+            initParticleAnimation('cta-canvas', 40); 
         });
     </script>
-    <!-- FIN: Script para el Carrusel del Webinar -->
 </body>
 </html>
