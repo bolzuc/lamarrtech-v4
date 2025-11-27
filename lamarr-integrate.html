@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/components.css">
     
     <!-- CSS Específicos -->
-    <link rel="stylesheet" href="css/service-page.css"> <!-- Nuevo estilo refinado -->
+    <link rel="stylesheet" href="css/service-page.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home-footer.css"> <!-- Footer Oscuro -->
 </head>
@@ -98,48 +98,48 @@
         <section class="page-section">
             <div class="container">
                 
-                <!-- Estrategia (Highlight en Blanco) -->
+                <!-- Estrategia -->
                 <div class="strategy-block reveal"> 
                     <p data-lang-key="integrate_s1_p">En el núcleo de la transformación digital está la integración. Aseguramos que tus aplicaciones críticas (ERP, CRM, SCM) se comuniquen eficientemente, eliminando silos de datos y automatizando procesos de extremo a extremo.</p>
                 </div>
 
-                <!-- DISEÑO REFINADO (Timeline Fina) -->
-                <div class="refined-process-container">
+                <!-- DISEÑO CORREGIDO: Usando clases existentes en service-page.css -->
+                <div class="process-layout-container">
                     
-                    <!-- Columna Izquierda: Lista Fina -->
-                    <div class="process-text-side reveal">
-                        <!-- Título limpio sin decoración -->
+                    <!-- Columna Izquierda: Lista estilo Timeline Sólido -->
+                    <div class="reveal">
+                        <!-- Título limpio -->
                         <h2 class="section-title-clean" data-lang-key="integrate_s1_h2">Integra tu Ecosistema Tecnológico</h2>
 
-                        <ul class="refined-timeline-list">
+                        <ul class="solid-process-list">
                             <!-- Item 1 -->
-                            <li class="refined-timeline-item">
+                            <li class="solid-process-item">
                                 <h3 data-lang-key="integrate_s1_l1">SAP Cloud Platform Integration (CPI)</h3>
                                 <p>Diseño y gestión de flujos de integración robustos. Conectamos tu ERP SAP con el mundo exterior de forma segura y escalable.</p>
                             </li>
 
                             <!-- Item 2 -->
-                            <li class="refined-timeline-item">
+                            <li class="solid-process-item">
                                 <h3 data-lang-key="integrate_s1_l2">Conectividad Híbrida</h3>
                                 <p>Unificamos tus entornos On-Premise y Multi-Cloud. Creamos puentes seguros para que tus sistemas legacy hablen con la nube moderna.</p>
                             </li>
 
                             <!-- Item 3 -->
-                            <li class="refined-timeline-item">
+                            <li class="solid-process-item">
                                 <h3 data-lang-key="integrate_s1_l3">Integración de APIs</h3>
                                 <p>Creamos, publicamos y gestionamos APIs para exponer tus servicios de negocio, facilitando la innovación y la conexión con partners.</p>
                             </li>
 
                             <!-- Item 4 -->
-                            <li class="refined-timeline-item">
+                            <li class="solid-process-item">
                                 <h3 data-lang-key="integrate_s1_l4">Flujos de Datos (ETL/ELT)</h3>
                                 <p>Movemos tus datos de forma segura y eficiente. Pipelines automatizados para alimentar tus lagos de datos y plataformas de IA.</p>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Columna Derecha: Imagen Visual -->
-                    <div class="visual-side reveal">
+                    <!-- Columna Derecha: Imagen Visual Sticky -->
+                    <div class="sticky-image-container reveal">
                         <img src="img/lamarr-integrate-visual.png" alt="Ecosistema de Integración SAP y Cloud">
                     </div>
                 </div>
@@ -221,7 +221,8 @@
                         if(this.y < 0 || this.y > height) this.vy *= -1;
                     }
                     draw() {
-                        ctx.fillStyle = 'rgba(255,255,255,0.7)'; 
+                        // Color celeste brillante para las partículas
+                        ctx.fillStyle = 'rgba(0, 212, 255, 0.7)'; 
                         ctx.beginPath();
                         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                         ctx.fill();
@@ -243,7 +244,8 @@
                             const dy = particles[i].y - particles[j].y;
                             const dist = Math.sqrt(dx*dx + dy*dy);
                             if(dist < 150) {
-                                ctx.strokeStyle = `rgba(255,255,255,${0.3 - dist/600})`;
+                                // Color celeste para las conexiones
+                                ctx.strokeStyle = `rgba(0, 212, 255, ${0.3 - dist/600})`;
                                 ctx.beginPath();
                                 ctx.moveTo(particles[i].x, particles[i].y);
                                 ctx.lineTo(particles[j].x, particles[j].y);

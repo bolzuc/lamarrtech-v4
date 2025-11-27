@@ -224,11 +224,6 @@
             margin: 0;
         }
 
-        /* --- ESTILOS DE CTA FINAL (Reubicados en hero.css pero necesarios para la estructura) --- */
-        /* Se mantienen aquí para referencia rápida o si no se carga hero.css correctamente en preview */
-        
-        /* ... Estilos de mapa y footer ... */
-
         @media (max-width: 767px) {
             .hero-premium h1 { font-size: 2.2em; }
             .hero-solutions-grid { max-width: 100%; } 
@@ -246,44 +241,43 @@
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
             
-            <div class="nav-wrapper">
-                <nav class="desktop-nav">
-                    <ul>
-                        <li><a href="index.html" class="active" data-lang-key="nav_inicio">INICIO</a></li>
-                        <li class="dropdown">
-                            <a href="#" data-lang-key="nav_servicios">SERVICIOS
-                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                            </a>
-                            <ul class="dropdown-content">
-                                <li><a href="lamarr-cloud.html" data-lang-key="nav_servicios_cloud">CLOUD</a></li>
-                                <li><a href="lamarr-integrate.html" data-lang-key="nav_servicios_integrate">INTEGRATE</a></li>
-                                <li><a href="lamarr-data-ai.html" data-lang-key="nav_servicios_data_ai">DATA+AI</a></li>
-                                <li><a href="lamarr-secure.html" data-lang-key="nav_servicios_secure">SECURE</a></li>
-                                <li><a href="services-sap.html" data-lang-key="nav_servicios_sap">SAP</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="noticias.html" data-lang-key="nav_noticias">NOTICIAS</a></li>
-                        <li><a href="contact.html" data-lang-key="nav_contacto">CONTACTO</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="language-switcher">
-                    <button class="lang-btn" aria-label="Seleccionar idioma">
-                        <span class="lang-btn-text">ES</span>
-                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                    </button>
-                    <div class="lang-dropdown">
-                        <a href="#" data-lang="es">🇪🇸 ES (Español)</a>
-                        <a href="#" data-lang="pt">🇧🇷 PT (Português)</a>
-                        <a href="#" data-lang="en">🇺🇸 EN (English)</a>
-                    </div>
-                </div>
-
-                <button class="menu-toggle" aria-label="Abrir menú">
-                    <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                    <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <!-- Estructura de navegación simplificada para igualar secciones de servicios -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="active" data-lang-key="nav_inicio">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_servicios">SERVICIOS
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html" data-lang-key="nav_servicios_cloud">CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html" data-lang-key="nav_servicios_integrate">INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html" data-lang-key="nav_servicios_data_ai">DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html" data-lang-key="nav_servicios_secure">SECURE</a></li>
+                            <li><a href="services-sap.html" data-lang-key="nav_servicios_sap">SAP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="noticias.html" data-lang-key="nav_noticias">NOTICIAS</a></li>
+                    <li><a href="contact.html" data-lang-key="nav_contacto">CONTACTO</a></li>
+                </ul>
+            </nav>
+            
+            <div class="language-switcher">
+                <button class="lang-btn" aria-label="Seleccionar idioma">
+                    <span class="lang-btn-text">ES</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                 </button>
+                <div class="lang-dropdown">
+                    <a href="#" data-lang="es">🇪🇸 ES (Español)</a>
+                    <a href="#" data-lang="pt">🇧🇷 PT (Português)</a>
+                    <a href="#" data-lang="en">🇺🇸 EN (English)</a>
+                </div>
             </div>
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
 
@@ -764,7 +758,8 @@
                         if(this.y < 0 || this.y > height) this.vy *= -1;
                     }
                     draw() {
-                        ctx.fillStyle = 'rgba(255,255,255,0.7)'; 
+                        // COLOR ACTUALIZADO: Celeste (Cian)
+                        ctx.fillStyle = 'rgba(0, 212, 255, 0.7)'; 
                         ctx.beginPath();
                         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                         ctx.fill();
@@ -787,7 +782,8 @@
                             const dy = particles[i].y - particles[j].y;
                             const dist = Math.sqrt(dx*dx + dy*dy);
                             if(dist < 150) {
-                                ctx.strokeStyle = `rgba(255,255,255,${0.3 - dist/600})`;
+                                // COLOR ACTUALIZADO: Líneas Celeste (Cian)
+                                ctx.strokeStyle = `rgba(0, 212, 255, ${0.3 - dist/600})`;
                                 ctx.beginPath();
                                 ctx.moveTo(particles[i].x, particles[i].y);
                                 ctx.lineTo(particles[j].x, particles[j].y);

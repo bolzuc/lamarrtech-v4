@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="css/components.css">
     
     <!-- CSS Específicos -->
-    <link rel="stylesheet" href="css/service-page.css"> <!-- Estilo Híbrido + Grid 2x2 -->
+    <link rel="stylesheet" href="css/service-page.css"> 
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home-footer.css"> <!-- Footer Oscuro -->
+    <link rel="stylesheet" href="css/home-footer.css"> 
 </head>
 <body>
 
@@ -106,8 +106,7 @@
 
                 <h2 class="section-subtitle reveal" data-lang-key="sap_s2_h2">Nuestros Servicios SAP</h2>
 
-                <!-- GRID 2x2 (Ajustado para 4 items principales, o flow fluido) -->
-                <!-- Nota: Había 5 items, para mantener el grid 2x2 perfecto, la 5ta tarjeta quedará centrada abajo, lo cual se ve bien gracias a Flexbox en el CSS -->
+                <!-- GRID 2x2 -->
                 <div class="service-feature-list">
                     
                     <div class="service-feature-item reveal">
@@ -126,7 +125,6 @@
                         </div>
                         <div class="service-feature-content">
                             <h3 data-lang-key="sap_s2_c2_h3">Implementación y Actualización</h3>
-                            <!-- Usamos <p> en lugar de <ul> para mantener consistencia visual con las tarjetas -->
                             <p>Implementación SAP Business One, migración a versión 10.0 (HANA) y evolución de SAP ECC hacia S/4 HANA.</p>
                         </div>
                     </div>
@@ -151,7 +149,6 @@
                         </div>
                     </div>
                     
-                    <!-- Tarjeta 5 (Centrada automáticamente por Flexbox) -->
                     <div class="service-feature-item reveal">
                         <div class="service-feature-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
@@ -221,8 +218,8 @@
     
     <script>
         (function() {
-            // Animación Partículas
-            function initParticleAnimation(canvasId, particleCount = 40) {
+            // Animación Partículas CIAN
+            function initParticleAnimation(canvasId, particleCount = 40, color = 'rgba(34, 211, 238, 0.7)', strokeColor = 'rgba(34, 211, 238, 0.3)') {
                 const canvas = document.getElementById(canvasId);
                 if(!canvas) return;
                 const ctx = canvas.getContext('2d');
@@ -249,7 +246,7 @@
                         if(this.y < 0 || this.y > height) this.vy *= -1;
                     }
                     draw() {
-                        ctx.fillStyle = 'rgba(255,255,255,0.7)'; 
+                        ctx.fillStyle = color;
                         ctx.beginPath();
                         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                         ctx.fill();
@@ -271,7 +268,12 @@
                             const dy = particles[i].y - particles[j].y;
                             const dist = Math.sqrt(dx*dx + dy*dy);
                             if(dist < 150) {
-                                ctx.strokeStyle = `rgba(255,255,255,${0.3 - dist/600})`;
+                                let opacity = 0.3 - dist/600;
+                                let strokeStyle = strokeColor;
+                                if(strokeColor.includes('rgba')) {
+                                     strokeStyle = strokeColor.replace(/,[\s\d.]+\)/, `,${opacity})`);
+                                }
+                                ctx.strokeStyle = strokeStyle;
                                 ctx.beginPath();
                                 ctx.moveTo(particles[i].x, particles[i].y);
                                 ctx.lineTo(particles[j].x, particles[j].y);
@@ -299,7 +301,8 @@
             }
 
             document.addEventListener('DOMContentLoaded', () => {
-                initParticleAnimation('service-canvas', 40);
+                // Partículas Cian en SAP
+                initParticleAnimation('service-canvas', 40, 'rgba(34, 211, 238, 0.7)', 'rgba(34, 211, 238, 0.3)');
                 window.addEventListener('scroll', revealOnScroll);
                 revealOnScroll();
             });
