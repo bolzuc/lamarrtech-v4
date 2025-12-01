@@ -15,8 +15,10 @@ const translations = {
         footer_copyright: "© 2025 Lamarr Tech. Todos los derechos reservados.",
         
         // --- Página: index.html ---
-        hero_h1: "Creemos que el valor real nace de conectar la tecnología con un soporte humano experto.",
-        hero_p: "Por eso integramos tu ecosistema End-to-End (SAP, Cloud, Apps) para que opere sin fricción. Te acompañamos con consultores expertos, no con tickets. Entendemos tu negocio y estamos presentes en cada etapa.",
+        // AJUSTE HERO (Punto 1)
+        hero_h1: "Conectamos tu ecosistema tecnológico con soporte humano experto.",
+        hero_p: "Integramos tus plataformas clave (SAP, Cloud, Data & Apps) para una operación fluida. Te acompañamos con consultores expertos, no con tickets. Garantizamos rendimiento y escalabilidad.",
+        // Fin Ajuste Hero
         card_cloud_h3: "Arquitectura Multicloud para tu Negocio",
         card_cloud_p: "Elegimos y combinamos AWS, Google Cloud Platform y Huawei Cloud para construir una infraestructura flexible, eficiente y preparada para crecer. Sin dependencias forzadas. Tú eliges. Tu negocio manda.",
         card_cloud_btn: "Ver Cloud",
@@ -64,6 +66,9 @@ const translations = {
         form_service_option: "Selecciona un servicio de interés...",
         form_message: "Mensaje",
         form_submit_btn: "Enviar",
+        // NUEVA CLAVE DE CONFIANZA (Punto 2)
+        form_response_time: "Recibirás una respuesta de un especialista en menos de 24 horas hábiles.",
+        // Fin Nueva Clave
         contact_info_h2: "Información Directa",
         contact_info_company: "Razón Social:", // NUEVA
         contact_info_rut: "Rut:", // NUEVA
@@ -133,7 +138,7 @@ const translations = {
         integrate_s1_l2: "<strong>Conectividad Híbrida:</strong> Unificamos tus entornos On-Premise y Multi-Cloud.",
         integrate_s1_l3: "<strong>Integración de APIs:</strong> Creamos y gestionamos APIs para conectar tus servicios.",
         integrate_s1_l4: "<strong>Flujos de Datos (ETL/ELT):</strong> Movemos tus datos de forma segura para analítica y IA.",
-        integrate_s1_btn: "Agenda una Consultoría",
+        integrate_s1_btn: "Conecta tu ecosistema hoy",
 
         // --- Página: lamarr-secure.html ---
         secure_h1: "LAMARR | SECURE",
@@ -168,7 +173,7 @@ const translations = {
         news_s2_c1_p: "Lamarr participó en el Huawei Cloud Summit, donde fuimos reconocidos como Partner con Potencial en la región por nuestra experiencia en modernización SAP, estrategias multicloud y arquitecturas híbridas. Este hito refleja nuestro compromiso con soluciones de alto impacto, con ejecución técnica propia y acompañamiento continuo.",
         news_s2_c1_alt: "Certificado Huawei Cloud Partner Lamarr Tech",
         news_s2_c2_h3: "Evento Presencial: SAP Business One en Huawei Cloud",
-        news_s2_c2_p: "Realizamos un encuentro ejecutivo orientado a organizaciones que operan SAP Business One y desean migrar u optimizar su infraestructura en la nube, manteniendo continuidad operativa y control de costos. Presentamos rutas de transición, casos reales y modelos de arquitectura.",
+        news_s2_c2_p: "Realizamos un encuentro ejecutivo enfocado en organizaciones que operan SAP Business One y buscan optimizar su infraestructura en la nube. El evento se centró en presentar rutas de transición claras, casos de éxito reales y modelos de arquitectura eficientes en Huawei Cloud.",
         news_s2_c2_btn: "Leer más y ver video",
         news_s2_c3_h3: "Webinar Ejecutivo junto a Noventiq: El Fin de Soporte de SAP ECC",
         news_s2_c3_p: "En un encuentro ejecutivo reciente, conversamos junto a Noventiq sobre el fin de soporte de SAP ECC, sus implicancias y las opciones de transición hacia SAP en la nube. El enfoque fue claro: tomar decisiones informadas, no apresuradas.",
@@ -275,21 +280,24 @@ const translations = {
         footer_copyright: "© 2025 Lamarr Tech. All rights reserved.",
         
         // --- Página: index.html ---
-        hero_h1: "We believe real value comes from connecting technology with expert human support.",
-        hero_p: "That's why we integrate your End-to-End ecosystem (SAP, Cloud, Apps) to operate frictionlessly. We support you with expert consultants, not tickets. We understand your business and are present at every stage.",
-        card_cloud_h3: "Multicloud Architecture for your Business",
+        // AJUSTE HERO (Punto 1) - Revisión de tono (Punto 4)
+        hero_h1: "We connect your technology ecosystem with expert human support.",
+        hero_p: "We integrate your key platforms (SAP, Cloud, Data & Apps) for fluid operations. We support you with expert consultants, not tickets. We guarantee performance and scalability.",
+        // Fin Ajuste Hero
+        card_cloud_h3: "Multicloud Architecture",
         card_cloud_p: "We select and combine AWS, Google Cloud Platform, and Huawei Cloud to build a flexible, efficient, and growth-ready infrastructure. No forced dependencies. You choose. Your business commands.",
         card_cloud_btn: "View Cloud",
-        card_integrate_h3: "Integration of your Tech Ecosystem",
+        // AJUSTE INTEGRATE (Punto 4) - Cambio de "Integration of your Tech Ecosystem" a "Ecosystem Integration Services"
+        card_integrate_h3: "Ecosystem Integration Services",
         card_integrate_p: "We connect SAP, cloud, applications, and data so operations flow without silos, rework, or friction.",
         card_integrate_btn: "View Integrate",
-        card_data_h3: "From Data to Action (Data + IA)",
+        card_data_h3: "Data & Applied AI",
         card_data_p: "We turn your data into actionable insights. Faster, more accurate, and strategic decisions with direct impact on your operation.",
         card_data_btn: "View Data+AI",
-        card_secure_h3: "Comprehensive Data & Operations Protection",
+        card_secure_h3: "Comprehensive Cybersecurity",
         card_secure_p: "We design multicloud security with access control, smart backup, and continuous monitoring. Less risk, more continuity, and total visibility.",
         card_secure_btn: "View Secure",
-        card_sap_h3: "Deep Expertise in the SAP Ecosystem",
+        card_sap_h3: "Deep SAP Expertise",
         card_sap_p: "20+ years of real experience in SAP Business One and SAP ECC. We implement and optimize with criteria and process knowledge. Results from day one.",
         card_sap_btn: "View SAP",
         partners_h2: "Allies building a future with Lamarr",
@@ -324,6 +332,9 @@ const translations = {
         form_service_option: "Select a service of interest...",
         form_message: "Message",
         form_submit_btn: "Send",
+        // NUEVA CLAVE DE CONFIANZA (Punto 2)
+        form_response_time: "You will receive a response from a specialist in less than 24 business hours.",
+        // Fin Nueva Clave
         contact_info_h2: "Direct Information",
         contact_info_company: "Business Name:", 
         contact_info_rut: "Tax ID:", 
@@ -344,9 +355,9 @@ const translations = {
         cloud_s1_c1_p: "Migration plans (Lift & Shift, Re-platform) and application modernization (containers, serverless) without disrupting your business.",
         cloud_s1_c2_h3: "FinOps and Cost Optimization",
         cloud_s1_c2_p: "Continuous audit of your cloud spending. We implement FinOps strategies to eliminate waste and reduce your monthly bill.",
-        cloud_s1_c3_h3: "Managed Services and DevSecOps",
+        card_cloud_h3: "Managed Services and DevSecOps", // Reajustado card_cloud_h3 para tono
         cloud_s1_c3_p: "24/7 monitoring, patch management, security, and CI/CD pipeline automation. We handle operations so you can focus on innovation.",
-        cloud_s1_c4_h3: "SAP Architecture on the Cloud",
+        cloud_s1_c4_h3: "SAP Architecture on Cloud",
         cloud_s1_c4_p: "We design high-availability (HA/DR) architectures for SAP S/4HANA and B1 on public clouds, certified and performance-optimized.",
         cloud_s1_btn: "Start your cloud migration",
 
@@ -393,7 +404,7 @@ const translations = {
         integrate_s1_l2: "<strong>Hybrid Connectivity:</strong> We unify your On-Premise and Multi-Cloud environments.",
         integrate_s1_l3: "<strong>API Integration:</strong> We create and manage APIs to connect your services.",
         integrate_s1_l4: "<strong>Data Flows (ETL/ELT):</strong> We move your data securely for analytics and AI.",
-        integrate_s1_btn: "Schedule a Consultation",
+        integrate_s1_btn: "Connect your ecosystem today",
 
         // --- Página: lamarr-secure.html ---
         secure_h1: "LAMARR | SECURE",
@@ -535,22 +546,25 @@ const translations = {
         footer_copyright: "© 2025 Lamarr Tech. Todos os direitos reservados.",
         
         // --- Página: index.html ---
-        hero_h1: "Acreditamos que o valor real nasce da conexão da tecnologia com o suporte humano especializado.",
-        hero_p: "É por isso que integramos seu ecossistema End-to-End (SAP, Nuvem, Apps) para operar sem atritos. Acompanhamos você com consultores especializados, não com tickets. Entendemos seu negócio e estamos presentes em cada etapa.",
+        // AJUSTE HERO (Punto 1) - Revisión de tono (Punto 4)
+        hero_h1: "Conectamos seu ecossistema tecnológico com suporte humano especializado.",
+        hero_p: "Integramos suas plataformas-chave (SAP, Nuvem, Dados e Apps) para uma operação fluida. Acompanhamos você com consultores especializados, não com tickets. Garantimos desempenho e escalabilidade.",
+        // Fin Ajuste Hero
         card_cloud_h3: "Arquitetura Multicloud para o seu Negócio",
-        card_cloud_p: "Escolhemos e combinamos AWS, Google Cloud Platform e Huawei Cloud para construir una infraestrutura flexível, eficiente e pronta para crescer. Sem dependências forçadas. Você escolhe. O seu negócio manda.",
+        card_cloud_p: "Escolhemos e combinamos AWS, Google Cloud Platform e Huawei Cloud para construir uma infraestrutura flexível, eficiente e pronta para crescer. Sem dependências forçadas. Você escolhe. O seu negócio manda.",
         card_cloud_btn: "Ver Nuvem",
-        card_integrate_h3: "Integração do seu Ecossistema Tecnológico",
+        // AJUSTE INTEGRATE (Punto 4) - Cambio de "Integração do seu Ecossistema Tecnológico" a "Serviços de Integração de Ecossistema"
+        card_integrate_h3: "Serviços de Integração de Ecossistema",
         card_integrate_p: "Conectamos SAP, nuvem, aplicativos e dados para que a operação flua sem silos, retrabalho e atritos.",
         card_integrate_btn: "Ver Integrate",
-        card_data_h3: "Do Dado à Ação (Data + IA)",
+        card_data_h3: "Dados e IA Aplicada",
         card_data_p: "Transformamos seus dados em conhecimento acionável. Decisões mais rápidas, precisas e estratégicas com impacto direto na sua operação.",
         card_data_btn: "Ver Data+AI",
-        card_secure_h3: "Proteção Integral de Dados e Operações",
+        card_secure_h3: "Cibersegurança Integral",
         card_secure_p: "Projetamos segurança multinuvem com controle de acesso, backup inteligente e monitoramento contínuo. Menos risco, mais continuidade e visibilidade total.",
         card_secure_btn: "Ver Secure",
-        card_sap_h3: "Domínio Profundo do Ecossistema SAP",
-        card_sap_p: "+20 anos de experiência real em SAP Business One e SAP ECC. Implementamos e otimizamos com critério e conocimiento de processos. Resultados desde o primeiro dia.",
+        card_sap_h3: "Profunda Expertise em SAP",
+        card_sap_p: "+20 anos de experiência real em SAP Business One e SAP ECC. Implementamos e otimizamos com critério e conhecimento de processos. Resultados desde o primeiro dia.",
         card_sap_btn: "Ver SAP",
         partners_h2: "Aliados que constroem um futuro com a Lamarr",
         
@@ -584,6 +598,9 @@ const translations = {
         form_service_option: "Selecione um serviço de interesse...",
         form_message: "Mensagem",
         form_submit_btn: "Enviar",
+        // NUEVA CLAVE DE CONFIANZA (Punto 2)
+        form_response_time: "Você receberá uma resposta de um especialista em menos de 24 horas úteis.",
+        // Fin Nueva Clave
         contact_info_h2: "Informações Diretas",
         contact_info_company: "Razão Social:", // NUEVA
         contact_info_rut: "RUT:", // NUEVA
@@ -623,7 +640,7 @@ const translations = {
         data_s2_c3_h3: "PREDICT & INSIGHTS",
         data_s2_c3_p: "Veja o que está acontecendo e o que está por vir. Com modelos preditivos e análise avançada, detectamos padrões, antecipamos comportamentos e geramos recomendações práticas.",
         data_s2_c4_h3: "AI SOLUTIONS",
-        data_s2_c4_p: "Soluções Plug & Play de IA prontas para usar (scaleAssist, scaleRep) que se integramPSI_GSC_VOWEL_S.integram imediatamente aos seus procesos-chave, sem desenvolvimentos intermináveis ou altos investimentos iniciais.",
+        data_s2_c4_p: "Soluções Plug & Play de IA prontas para usar (scaleAssist, scaleRep) que se integram imediatamente aos seus procesos-chave, sem desenvolvimentos intermináveis ou altos investimentos iniciais.",
         data_s2_c5_h3: "AI FACTORY",
         data_s2_c5_p: "Desenvolvimento sob medida para sua indústria. Colocamos à sua disposição equipes especializadas em Gen AI, Machine Learning e Data Science para criar soluções únicas.",
         data_s2_c6_h3: "DATA 360",
@@ -653,7 +670,7 @@ const translations = {
         integrate_s1_l2: "<strong>Conectividade Híbrida:</strong> Unificamos seus ambientes On-Premise e Multi-Cloud.",
         integrate_s1_l3: "<strong>Integración de APIs:</strong> Criamos e gerenciamos APIs para conectar seus serviços.",
         integrate_s1_l4: "<strong>Fluxos de Dados (ETL/ELT):</strong> Movemos seus dados com segurança para análise e IA.",
-        integrate_s1_btn: "Agende uma Consultoria",
+        integrate_s1_btn: "Conecte seu ecossistema hoje",
 
         // --- Página: lamarr-secure.html ---
         secure_h1: "LAMARR | SECURE",
@@ -713,7 +730,7 @@ const translations = {
         team_s1_h2: "Direção e Estratégia",
         team_s1_c1_h3: "Daniela Santos Escalona",
         team_s1_c1_r: "Founder & CEO | Gerente Comercial",
-        team_s1_c1_p: "Lidera a estratégia global da Lamarr Tech, alianzas com AWS, Google Cloud Platform e Huawei, desenvolvimento de mercado e relacionamento direto com clientes de médio e grande porte. Responsável pelo posicionamento comercial, propostas de valor, negociações e fechamento de oportunidades estratégicas.",
+        team_s1_c1_p: "Lidera a estratégia global da Lamarr Tech, alianças com AWS, Google Cloud Platform e Huawei, desenvolvimento de mercado e relacionamento direto com clientes de médio e grande porte. Responsável pelo posicionamento comercial, propostas de valor, negociações e fechamento de oportunidades estratégicas.",
         team_s1_c2_h3: "Alcides Lizardo",
         team_s1_c2_r: "Co-Founder | Diretor de Operações e Finanças",
         team_s1_c2_p: "Responsável pela operação interna de projetos, finanças, controle de custos, contratação de pessoal, relacionamento com fornecedores e garantia de qualidade. Supervisiona as áreas técnicas e o cumprimento dos SLAs em serviços gerenciados.",

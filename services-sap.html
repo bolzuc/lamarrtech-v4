@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios SAP - Lamarr Tech</title>
+    <!-- SEO Específico -->
+    <meta name="description" content="Consultoría funcional y técnica experta en SAP Business One (B1) y S/4HANA en Chile. Migraciones, soporte 24/7 y optimización de procesos logísticos y financieros.">
+    <meta name="keywords" content="SAP Business One Consultoría, Migración SAP S/4HANA, Soporte SAP B1 Chile, Optimización Procesos SAP, SAP BTP Integration, SAP Cloud Hosting">
+    <link rel="canonical" href="https://www.lamarrtech.cl/services-sap.html">
+    <!-- Fin SEO Específico -->
+
     <link rel="icon" href="img/infinity-modern-bluedark.png" type="image/png">
     
     <!-- CSS Base -->
@@ -88,7 +94,9 @@
             <canvas id="service-canvas"></canvas>
             
             <div class="service-hero-content reveal active">
-                <span class="service-badge">Ecosistema SAP</span>
+                <!-- INICIO: AJUSTE BADGE -->
+                <span class="service-badge" data-lang-key="sap_badge">Ecosistema SAP</span>
+                <!-- FIN: AJUSTE BADGE -->
                 <h1 data-lang-key="sap_h1">LAMARR | SAP</h1>
                 <p><strong data-lang-key="sap_s1">El poder de SAP, llevado a su máximo desempeño.</strong><br>
                 <span data-lang-key="sap_p1">Evolucionamos tu sistema para que sea más eficiente, integrado y escalable.</span></p>
@@ -170,6 +178,7 @@
                 <div class="sap-results-list">
                     <div class="result-item">
                         <span class="result-marker">►</span>
+                        <!-- INICIO: AJUSTE LISTA CASOS REALES -->
                         <span data-lang-key="sap_s3_l1">Migración SAP B1 a AWS: <strong>-35% costos</strong>.</span>
                     </div>
                     <div class="result-item">
@@ -179,6 +188,7 @@
                     <div class="result-item">
                         <span class="result-marker">►</span>
                         <span data-lang-key="sap_s3_l3">Optimización SAP ECC: <strong>+60% velocidad</strong>.</span>
+                        <!-- FIN: AJUSTE LISTA CASOS REALES -->
                     </div>
                 </div>
 
@@ -203,11 +213,13 @@
                 <div class="footer-col">
                     <h4 data-lang-key="nav_servicios">Servicios</h4>
                     <ul>
-                        <li><a href="lamarr-cloud.html">Cloud Solutions</a></li>
-                        <li><a href="lamarr-integrate.html">Integration Services</a></li>
-                        <li><a href="lamarr-data-ai.html">Data & AI</a></li>
-                        <li><a href="lamarr-secure.html">Cybersecurity</a></li>
-                        <li><a href="services-sap.html">SAP Services</a></li>
+                        <!-- INICIO: AJUSTE FOOTER LINKS -->
+                        <li><a href="lamarr-cloud.html" data-lang-key="footer_service_cloud">Cloud Solutions</a></li>
+                        <li><a href="lamarr-integrate.html" data-lang-key="footer_service_integrate">Integration Services</a></li>
+                        <li><a href="lamarr-data-ai.html" data-lang-key="footer_service_data_ai">Data & AI</a></li>
+                        <li><a href="lamarr-secure.html" data-lang-key="footer_service_secure">Cybersecurity</a></li>
+                        <li><a href="services-sap.html" data-lang-key="footer_service_sap">SAP Services</a></li>
+                        <!-- FIN: AJUSTE FOOTER LINKS -->
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -216,6 +228,7 @@
                         <li><a href="index.html" data-lang-key="footer_link_home">Inicio</a></li>
                         <li><a href="noticias.html" data-lang-key="footer_link_news">Noticias</a></li>
                         <li><a href="contact.html" data-lang-key="footer_link_contact">Contacto</a></li>
+                        <!-- LinkedIn no necesita data-lang-key -->
                         <li><a href="https://www.linkedin.com/company/lamarr-tech" target="_blank">LinkedIn</a></li>
                     </ul>
                 </div>
@@ -227,6 +240,7 @@
     </footer>
     
     <script src="js/script.js"></script>
+    <!-- Incluir idiomas.js para que las claves se procesen -->
     <script src="js/idiomas.js"></script>
     
     <script>

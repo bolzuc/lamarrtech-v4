@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Lamarr Tech: Consultoría experta en SAP, Migración Cloud (AWS, GCP, Huawei) e Inteligencia Artificial. Transformamos datos en decisiones estratégicas en Chile y Latam.">
-    <meta name="keywords" content="SAP Business One, SAP S/4HANA, Migración Cloud, AWS, Google Cloud, Huawei Cloud, Inteligencia Artificial, Consultoría TI Chile, Transformación Digital">
+    <!-- INICIO: AJUSTE SEO -->
+    <meta name="description" content="Consultoría experta en SAP Business One y S/4HANA, Migración Multicloud (AWS, GCP, Huawei Cloud), e Inteligencia Artificial aplicada al negocio en Chile y Latam.">
+    <meta name="keywords" content="SAP Business One Chile, S/4HANA Chile, Migración AWS Latam, Consultoría SAP Santiago, IA para empresas Chile, Integración SAP Cloud, Cloud Consulting Chile, Transformación Digital Latam">
+    <!-- FIN: AJUSTE SEO -->
     <meta name="author" content="Lamarr Tech">
     <link rel="canonical" href="https://www.lamarrtech.cl/">
 
@@ -320,10 +322,12 @@
             
             <div class="hero-content">
                 <div class="container">
-                    <h1 data-lang-key="hero_h1">Creemos que el valor real nace de conectar la tecnología con un soporte humano experto.</h1>
-                    <p class="hero-subtitle" data-lang-key="hero_p">Por eso integramos tu ecosistema End-to-End (SAP, Cloud, Apps) para que opere sin fricción. Te acompañamos con consultores expertos, no con tickets. Entendemos tu negocio y estamos presentes en cada etapa.</p>
+                    <!-- INICIO: OPTIMIZACIÓN HERO (Punto 1) -->
+                    <h1 data-lang-key="hero_h1">Conectamos tu ecosistema tecnológico con soporte humano experto.</h1>
+                    <p class="hero-subtitle" data-lang-key="hero_p">Integramos tus plataformas clave (SAP, Cloud, Data & Apps) para una operación fluida. Te acompañamos con consultores expertos, no con tickets. Garantizamos rendimiento y escalabilidad.</p>
+                    <!-- FIN: OPTIMIZACIÓN HERO (Punto 1) -->
                     
-                    <a href="contact.html" class="btn-primary hero-cta">Agenda una Consultoría Gratuita</a>
+                    <a href="contact.html" class="btn-primary hero-cta" data-lang-key="hero_cta_btn">Agenda una Consultoría Gratuita</a>
 
                     <!-- SECCIÓN DE TARJETAS CON NUEVOS ICONOS -->
                     <div id="services-container" class="hero-solutions-grid" style="margin-top: 60px;">
@@ -523,11 +527,11 @@
                 <div class="footer-col">
                     <h4 data-lang-key="nav_servicios">Servicios</h4>
                     <ul>
-                        <li><a href="lamarr-cloud.html">Cloud Solutions</a></li>
-                        <li><a href="lamarr-integrate.html">Integration Services</a></li>
-                        <li><a href="lamarr-data-ai.html">Data & AI</a></li>
-                        <li><a href="lamarr-secure.html">Cybersecurity</a></li>
-                        <li><a href="services-sap.html">SAP Services</a></li>
+                        <li><a href="lamarr-cloud.html" data-lang-key="footer_service_cloud">Cloud Solutions</a></li>
+                        <li><a href="lamarr-integrate.html" data-lang-key="footer_service_integrate">Integration Services</a></li>
+                        <li><a href="lamarr-data-ai.html" data-lang-key="footer_service_data_ai">Data & AI</a></li>
+                        <li><a href="lamarr-secure.html" data-lang-key="footer_service_secure">Cybersecurity</a></li>
+                        <li><a href="services-sap.html" data-lang-key="footer_service_sap">SAP Services</a></li>
                     </ul>
                 </div>
 
@@ -798,10 +802,25 @@
                 init();
             }
 
-            // Inicializar en ambos canvas cuando el DOM esté listo
+            // Función de revelación de scroll (mantenida por la clase .reveal)
+            function revealOnScroll() {
+                const reveals = document.querySelectorAll('.reveal');
+                const windowHeight = window.innerHeight;
+                const elementVisible = 150;
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            }
+
             document.addEventListener('DOMContentLoaded', () => {
                 initParticleAnimation('hero-canvas', 50);
                 initParticleAnimation('cta-canvas', 40); // Un poco menos denso para el footer
+                
+                window.addEventListener('scroll', revealOnScroll);
+                revealOnScroll();
             });
         })();
     </script>

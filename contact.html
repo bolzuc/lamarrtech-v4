@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/contact.css">
+    <!-- Se mantiene el footer.css base, pero se añade home-footer.css para el estilo completo -->
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home-footer.css"> 
     <link rel="stylesheet" href="css/animations.css">
     
 </head>
@@ -159,17 +161,22 @@
                             <label for="message" data-lang-key="form_message">Mensaje</label>
                         </div>
                         <button type="submit" data-lang-key="form_submit_btn">Enviar</button>
+                        <!-- INICIO: REFUERZO DE CONFIANZA (Punto 2) -->
+                        <p style="margin-top: 15px; font-size: 0.95rem; color: #a5c9ff;" data-lang-key="form_response_time">
+                            Recibirás una respuesta de un especialista en menos de 24 horas hábiles.
+                        </p>
+                        <!-- FIN: REFUERZO DE CONFIANZA (Punto 2) -->
                     </form>
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN ELIMINADA: La información directa se encuentra ahora en el footer. 
         <section class="contact-info-section">
             <div class="container">
                 <div class="contact-info-container">
                     <h2 data-lang-key="contact_info_h2">Información Directa</h2>
                     <ul class="contact-info-list">
-                        <!-- INFORMACIÓN ACTUALIZADA -->
                         <li><strong data-lang-key="contact_info_address">Dirección:</strong> Av nueva providencia 1881, of 1912.</li>
                         <li><strong data-lang-key="contact_info_email">Correo Electrónico:</strong> contacto@lamarrtech.cl</li>
                         <li><strong data-lang-key="contact_info_phone">Teléfono:</strong> +56 9 3199 3952</li>
@@ -177,6 +184,7 @@
                 </div>
             </div>
         </section>
+        -->
     </main>
 
     <div id="whatsapp-popup" class="popup-container" style="display: none;">
@@ -188,11 +196,51 @@
         </div>
     </div>
 
-    <footer>
+    <!-- INICIO: FOOTER COMPLETO (REEMPLAZANDO EL FOOTER SENCILLO) -->
+    <footer class="home-footer">
         <div class="container">
-            <p data-lang-key="footer_copyright">&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
+            <div class="footer-grid">
+                <!-- Columna 1: Contacto -->
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_contact_h4">Contacto</h4>
+                    <ul>
+                        <li><strong data-lang-key="footer_address_label">Dirección:</strong> Av nueva providencia 1881, of 1912.</li>
+                        <li><strong data-lang-key="footer_email_label">Email:</strong> contacto@lamarrtech.cl</li>
+                        <li><strong data-lang-key="footer_phone_label">Teléfono:</strong> +56 9 3199 3952</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 2: Servicios (COMPLETA) -->
+                <div class="footer-col">
+                    <h4 data-lang-key="nav_servicios">Servicios</h4>
+                    <ul>
+                        <li><a href="lamarr-cloud.html">Cloud Solutions</a></li>
+                        <li><a href="lamarr-integrate.html">Integration Services</a></li>
+                        <li><a href="lamarr-data-ai.html">Data & AI</a></li>
+                        <li><a href="lamarr-secure.html">Cybersecurity</a></li>
+                        <li><a href="services-sap.html">SAP Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Empresa & Social -->
+                <div class="footer-col">
+                    <h4 data-lang-key="footer_links_h4">Empresa</h4>
+                    <ul>
+                        <li><a href="index.html" data-lang-key="footer_link_home">Inicio</a></li>
+                        <li><a href="noticias.html" data-lang-key="footer_link_news">Noticias</a></li>
+                        <li><a href="contact.html" data-lang-key="footer_link_contact">Contacto</a></li>
+                        <li><a href="https://www.linkedin.com/company/lamarr-tech" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Barra Copyright Integrada -->
+            <div class="footer-bottom">
+                <p data-lang-key="footer_copyright">&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
+    <!-- FIN: FOOTER COMPLETO -->
      
     <!-- Se carga el script principal de JS que ahora incluye la lógica de idioma -->
     <script src="js/script.js"></script>
